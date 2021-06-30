@@ -43,7 +43,7 @@ const ExerciceResults: React.FC<ExerciceResultsProps> = () => {
         expectedAnswer={answer2}
         answer={JSON.stringify(sumOfAllPositiveNumbers)}
       />
-      <ExerciceResult title="Initials" expectedAnswer={answer3} answer={JSON.stringify(initials)} />
+      <ExerciceResult title="Initials" expectedAnswer={answer3} answer={initials} />
     </div>
   );
 };
