@@ -6,7 +6,7 @@ type ExerciceResultsProps = Record<string, never>;
 
 const answer1 = "[1,4,9,16,25]";
 const answer2 = "42";
-const answer3 = "VNRRM";
+const answer3 = "VNRTM";
 
 const ExerciceResult: React.FC<{ title: string; answer: string; expectedAnswer: string }> = ({
   title,
