@@ -20,7 +20,7 @@ const BounceStation: React.FC<BounceStationProps> = () => {
   return (
     <div className="relative h-screen w-screen">
       <RenderCount count={rerenderCount} />
-      <BouncingBalls />
+      <BouncingBalls count={5}/>
     </div>
   );
 };

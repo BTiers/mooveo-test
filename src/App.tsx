@@ -1,13 +1,13 @@
 import React from "react";
 
-import Exercice from "./TS/ExerciceResult";
+// import Exercice from "./TS/ExerciceResult";
 // import BouncingStation from "./BouncingBall/BounceStation";
-// import Nationalize from "./API/Nationalize";
+import Nationalize from "./API/Nationalize";
 
 function App() {
-  return <Exercice />;
+  // return <Exercice />;
   // return <BouncingStation />;
-  // return <Nationalize />;
+  return <Nationalize />;
 }
 
 export default App;

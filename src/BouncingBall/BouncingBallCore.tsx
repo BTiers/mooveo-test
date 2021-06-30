@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 const MS_TO_BOUNCE = 2000;
 
@@ -18,13 +18,14 @@ function timeToPositionPercent(startTime: number, offset: number) {
   return `calc(((${percentage}vh)) * ${isGoingUp ? 1 : -1} + ${isGoingUp ? "0px" : "100vh"})`;
 }
 
-const left = `calc(${Math.random()} * 100vw)`;
-const offset = Math.random() * 10000;
-const color = getRandomColor();
 
 type BouncingBallCoreProps = any;
 
 const BouncingBallCore: React.FC<BouncingBallCoreProps> = ({ initialBounceTime }) => {
+  const left = useMemo(()=> `calc(${Math.random()} * 100vw)`, []);
+  const offset = useMemo(() => Math.random() * 10000, []);
+  const color = useMemo(() => getRandomColor(), []);
+
   return (
     <div
       className="w-36 h-36 absolute rounded-full z-0"

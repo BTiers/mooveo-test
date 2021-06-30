@@ -2,14 +2,18 @@ import React, { useState } from "react";
 
 import BouncingBallCore from "./BouncingBallCore";
 
-type BouncingBallsProps = Record<string, never>;
+interface BouncingBallsProps {
+  count: number
+};
 
-const BouncingBalls: React.FC<BouncingBallsProps> = () => {
+const BouncingBalls: React.FC<BouncingBallsProps> = ({count}) => {
   const [initialBounceTime] = useState(Date.now());
+  
+ const newArr = new Array(count).fill(1);
 
   return (
     <div className="z-0 relative h-screen w-screen bg-transparent">
-      <BouncingBallCore initialBounceTime={initialBounceTime} />
+      {newArr.map((e) => <BouncingBallCore initialBounceTime={initialBounceTime} />)}
     </div>
   );
 };
